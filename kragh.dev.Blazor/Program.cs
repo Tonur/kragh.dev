@@ -13,6 +13,15 @@ namespace kragh.dev.Blazor
 			var builder = WebAssemblyHostBuilder.CreateDefault(args);
 			builder.RootComponents.Add<App>("#app");
 
+			builder.Services.AddCors(options =>
+				options.AddDefaultPolicy(policyBuilder =>
+				{
+					policyBuilder
+						.AllowAnyOrigin()
+						.AllowAnyMethod()
+						.AllowAnyHeader();
+				}));
+
 			builder.Services.AddSingleton(_ =>
 			{
 				KraghConfiguration config = new();

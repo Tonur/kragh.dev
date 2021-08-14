@@ -1,4 +1,5 @@
 ﻿@page "/cv"
+@using Newtonsoft.Json
 @inject KraghConfiguration _config
 <h1>CV</h1>
 
@@ -18,10 +19,10 @@ else
 			@foreach (var experiencesByCompany in LinkedInResponse.Experiences
 					.GroupBy(experience => new { experience.Company, experience.LogoUrl, experience.CompanyLinkedInProfileUrl }))
 			{
-				<ItemCard ItemTitle="@experiencesByCompany.Key.Company" 
-				          LogoUrl="@experiencesByCompany.Key.LogoUrl" 
-				          LinkedInProfileUrl="@experiencesByCompany.Key.CompanyLinkedInProfileUrl" 
-				          ItemEntities="@experiencesByCompany.Select(item => new ItemEntity { Title = item.Title, Description = item.Description, Location = item.Location, StartsAt = item.StartsAt, EndsAt = item.EndsAt})" />
+				<ItemCard ItemTitle="@experiencesByCompany.Key.Company"
+				  LogoUrl="@experiencesByCompany.Key.LogoUrl"
+				  LinkedInProfileUrl="@experiencesByCompany.Key.CompanyLinkedInProfileUrl"
+				  ItemEntities="@experiencesByCompany.Select(item => new ItemEntity { Title = item.Title, Description = item.Description, Location = item.Location, StartsAt = item.StartsAt, EndsAt = item.EndsAt})" />
 				<br />
 			}
 		</div>
@@ -31,9 +32,9 @@ else
 			@foreach (var experiencesByCompany in LinkedInResponse.Education
 					.GroupBy(experience => new { experience.School, experience.LogoUrl }))
 			{
-				<ItemCard ItemTitle="@experiencesByCompany.Key.School" 
-				          LogoUrl="@experiencesByCompany.Key.LogoUrl" 
-				          ItemEntities="@experiencesByCompany.Select(item => new ItemEntity { Title = item.DegreeName, Description = item.FieldOfStudy, StartsAt = item.StartsAt, EndsAt = item.EndsAt})" />
+				<ItemCard ItemTitle="@experiencesByCompany.Key.School"
+				  LogoUrl="@experiencesByCompany.Key.LogoUrl"
+				  ItemEntities="@experiencesByCompany.Select(item => new ItemEntity { Title = item.DegreeName, Description = item.FieldOfStudy, StartsAt = item.StartsAt, EndsAt = item.EndsAt})" />
 
 				<br />
 			}
@@ -49,19 +50,16 @@ else
 
 	protected override async Task OnInitializedAsync()
 	{
-		LinkedInResponse = new LinkedInResponse
-		{
-			Education = new List<Education> { new() { DegreeName = "Datamatiker", LogoUrl = @"https://media-exp1.licdn.com/dms/image/C4D0BAQFyn8I9x-esIQ/company-logo_200_200/0/1535713841201?e=2159024400&v=beta&t=TUjFcMqVIgDQRzUdb9v_J-5NfM8HAQft1frs95xgXP8", School = "UCL", StartsAt = DateTime.Parse("5. october"), EndsAt = DateTime.Today } },
-			Experiences = new List<Experience> { new() { Title = "Dataspecialist", LogoUrl = @"https://media-exp1.licdn.com/dms/image/C560BAQG_dPVMM51dBA/company-logo_200_200/0/1519856334092?e=2159024400&v=beta&t=-RBQj2kTnrCoypbCb2M9gsSRktCUXGj4x28QwQL7zHc", Company = "Unik", CompanyLinkedInProfileUrl = "https://google.dk", StartsAt = DateTime.Today, EndsAt = DateTime.Today } },
-		};
-		//await ProxyCurlUrl
-		//.WithOAuthBearerToken(_config.ProxyCurlToken)
-		//.SetQueryParams(new
-		//{
-		//	url = HttpUtility.UrlEncode(LinkedInUrl.AppendPathSegment(_config.LinkedInId).ToString()),
-		//	use_cache = "if-present",
+		var response = await ProxyCurlUrl
+			.WithOAuthBearerToken(_config.ProxyCurlToken)
+			.SetQueryParams(new
+			{
+				url = HttpUtility.UrlEncode(LinkedInUrl.AppendPathSegment(_config.LinkedInId).ToString()),
+				use_cache = "if-present",
+			})
+			.GetStringAsync();
 
-		//})
-		//.GetJsonAsync<LinkedInResponse>();
+		LinkedInResponse = JsonConvert.DeserializeObject<LinkedInResponse>(response);
+
 	}
 }
