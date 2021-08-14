@@ -1,0 +1,69 @@
+﻿@page "/cv"
+@inject KraghConfiguration _config
+
+
+<h1>CV</h1>
+
+<p>A list of my accomplishments.</p>
+
+<br />
+
+@if (LinkedInResponse is null)
+{
+	<em>Loading...</em>
+}
+else
+{
+	<div class="row justify-content-between">
+		<div class="col-4">
+			<h2>Jobs</h2>
+			@foreach (var experiencesByCompany in LinkedInResponse.Experiences
+					.GroupBy(experience => new { experience.Company, experience.LogoUrl, experience.CompanyLinkedInProfileUrl }))
+			{
+				<ItemCard ItemTitle="@experiencesByCompany.Key.Company" 
+				          LogoUrl="@experiencesByCompany.Key.LogoUrl" 
+				          LinkedInProfileUrl="@experiencesByCompany.Key.CompanyLinkedInProfileUrl" 
+				          ItemEntities="@experiencesByCompany.Select(item => new ItemEntity { Title = item.Title, Description = item.Description, Location = item.Location, StartsAt = item.StartsAt, EndsAt = item.EndsAt})" />
+				<br />
+			}
+		</div>
+
+		<div class="col-4">
+			<h2>Educations</h2>
+			@foreach (var experiencesByCompany in LinkedInResponse.Education
+					.GroupBy(experience => new { experience.School, experience.LogoUrl }))
+			{
+				<ItemCard ItemTitle="@experiencesByCompany.Key.School" 
+				          LogoUrl="@experiencesByCompany.Key.LogoUrl" 
+				          ItemEntities="@experiencesByCompany.Select(item => new ItemEntity { Title = item.DegreeName, Description = item.FieldOfStudy, StartsAt = item.StartsAt, EndsAt = item.EndsAt})" />
+
+				<br />
+			}
+		</div>
+	</div>
+}
+
+@code {
+	public LinkedInResponse? LinkedInResponse { get; set; }
+
+	private const string ProxyCurlUrl = @"https://nubela.co/proxycurl/api/v2/linkedin";
+	private const string LinkedInUrl = @"https://www.linkedin.com/in/";
+
+	protected override async Task OnInitializedAsync()
+	{
+		LinkedInResponse = new LinkedInResponse
+		{
+			Education = new List<Education> { new() { DegreeName = "Datamatiker", LogoUrl = @"https://media-exp1.licdn.com/dms/image/C4D0BAQFyn8I9x-esIQ/company-logo_200_200/0/1535713841201?e=2159024400&v=beta&t=TUjFcMqVIgDQRzUdb9v_J-5NfM8HAQft1frs95xgXP8", School = "UCL", StartsAt = DateTime.Parse("5. october"), EndsAt = DateTime.Today } },
+			Experiences = new List<Experience> { new() { Title = "Dataspecialist", LogoUrl = @"https://media-exp1.licdn.com/dms/image/C560BAQG_dPVMM51dBA/company-logo_200_200/0/1519856334092?e=2159024400&v=beta&t=-RBQj2kTnrCoypbCb2M9gsSRktCUXGj4x28QwQL7zHc", Company = "Unik", CompanyLinkedInProfileUrl = "https://google.dk", StartsAt = DateTime.Today, EndsAt = DateTime.Today } },
+		};
+		//await ProxyCurlUrl
+		//.WithOAuthBearerToken(_config.ProxyCurlToken)
+		//.SetQueryParams(new
+		//{
+		//	url = HttpUtility.UrlEncode(LinkedInUrl.AppendPathSegment(_config.LinkedInId).ToString()),
+		//	use_cache = "if-present",
+
+		//})
+		//.GetJsonAsync<LinkedInResponse>();
+	}
+}

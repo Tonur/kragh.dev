@@ -1,0 +1,50 @@
+﻿@if (ItemEntities is null)
+{
+	<em>Loading...</em>
+}
+else
+{
+	<div class="card flex-wrap flex-row mt-2">
+		<div class="card-header border-0">
+			<a href="@LinkedInProfileUrl">
+				<img src="@LogoUrl" alt="@ItemTitle">
+			</a>
+		</div>
+		<div class="card-body">
+			<h4 class="card-title">@ItemTitle</h4>
+			<ul class="list-group list-group-flush">
+				@foreach (var item in ItemEntities)
+				{
+					<li class="list-group-item">
+						<h5 class="card-text">@item.Title</h5>
+						<p class="card-text">@item.Description</p>
+						<p class="card-text">@item.Location</p>
+						<p>@item.StartsAt.ToString("MMM. yyyy") - @CalculateEndText(item.EndsAt)</p>
+					</li>
+				}
+			</ul>
+		</div>
+	</div>
+}
+
+@code {
+	#nullable disable
+	[Parameter]
+	public string LinkedInProfileUrl { get; set; }
+
+	[Parameter]
+	public string LogoUrl { get; set; }
+
+	[Parameter]
+	public string ItemTitle { get; set; }
+
+	[Parameter]
+	public IEnumerable<ItemEntity> ItemEntities { get; set; }
+
+	private string CalculateEndText(DateTime? date)
+	{
+		return date is null || date == DateTime.Today
+			? "now"
+			: date.Value.ToString("MMM. yyyy");
+	}
+}
