@@ -1,0 +1,246 @@
+﻿{
+	"public_identifier": "christoffer-pedersen-826690145",
+	"profile_pic_url": "https://static-exp1.licdn.com/sc/h/244xhbkr7g40x6bsu4gi6q4ry",
+	"background_cover_image_url": "https://media-exp1.licdn.com/dms/image/C4E16AQGF57dNZK8ERw/profile-displaybackgroundimage-shrink_200_800/0/1596270383916?e=1634169600&v=beta&t=8h9L6k-n6QUb9uGurDBiEh0GkNxFBoWagUKV5XhNzNE",
+	"first_name": "Christoffer",
+	"last_name": "Pedersen",
+	"full_name": "Christoffer Pedersen",
+	"occupation": null,
+	"headline": null,
+	"summary": null,
+	"country": "DK",
+	"country_full_name": "Denmark",
+	"city": null,
+	"state": "Syddanmark",
+	"experiences": [],
+	"education": [],
+	"languages": [],
+	"accomplishment_organisations": [],
+	"accomplishment_publications": [],
+	"accomplishment_honors_awards": [],
+	"accomplishment_patents": [],
+	"accomplishment_courses": [],
+	"accomplishment_projects": [
+		{
+			"starts_at": {
+				"day": 1,
+				"month": 9,
+				"year": 2019
+			},
+			"ends_at": {
+				"day": 31,
+				"month": 1,
+				"year": 2020
+			},
+			"title": "Air Support Overflight Cost Diagnostic Tool",
+			"description": null,
+			"url": null
+		}
+	],
+	"accomplishment_test_scores": [],
+	"volunteer_work": [],
+	"certifications": [
+		{
+			"starts_at": {
+				"day": 1,
+				"month": 4,
+				"year": 2020
+			},
+			"ends_at": null,
+			"url": "http://www.linkedin.com/learning/learning-rabbitmq",
+			"name": "Learning RabbitMQ",
+			"license_number": null,
+			"display_source": "www.linkedin.com",
+			"authority": "LinkedIn"
+		},
+		{
+			"starts_at": {
+				"day": 1,
+				"month": 9,
+				"year": 2019
+			},
+			"ends_at": null,
+			"url": "http://www.linkedin.com/learning/learning-asp-dot-net-core-mvc",
+			"name": "Learning ASP.NET Core MVC",
+			"license_number": null,
+			"display_source": "www.linkedin.com",
+			"authority": "LinkedIn"
+		}
+	],
+	"connections": 37,
+	"people_also_viewed": [
+		{
+			"link": "https://dk.linkedin.com/in/tobiaslauritzen",
+			"name": "Tobias Lauritzen",
+			"summary": "Data Specialist at Unik System Design",
+			"location": "Vejle"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/sacha-k-therkildsen",
+			"name": "Sacha Kjærhus Therkildsen",
+			"summary": "Software QA, UI/UX og tester",
+			"location": "Syddanmark, Danmark"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/flemming-sand-02554961",
+			"name": "Flemming Sand",
+			"summary": "Dataspecialist hos Unik System Design",
+			"location": "Syddanmark, Danmark"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/danielosterbro",
+			"name": "Daniel Østerbro",
+			"summary": "Solutions Architect at Unik System Design A/S, with passion for quality and CI/CD",
+			"location": "Syddanmark, Danmark"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/malene-rye-hedegaard-gr%C3%B6nvall-aa860225",
+			"name": "Malene Rye Hedegaard Grönvall",
+			"summary": "1st. level bolig supportkonsulent",
+			"location": "Middelfart"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/jelajela",
+			"name": "Jela Nielsen",
+			"summary": "IT, Innovation and Entrepreneurship",
+			"location": "Vejen"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/lasse-ringgren-nielsen-7260ba13b",
+			"name": "Lasse Ringgren Nielsen",
+			"summary": "Udvikler hos Energinet",
+			"location": "Vejle"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/philip-bilenberg-s%C3%B8nderup-39358a217",
+			"name": "Philip Bilenberg Sønderup",
+			"summary": "Jobrådgiver hos Odense Kommune",
+			"location": "Odense"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/simon-hansen-bb0727218",
+			"name": "Simon Hansen",
+			"summary": "Går på UCL Erhvervsakademi og Professionshøjskole",
+			"location": "Vejle"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/mikaelnygaard",
+			"name": "Mikael Nygaard",
+			"summary": "Principal Cloud Consultant & Partner at Tricloud",
+			"location": "Fredericia"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/madsvigand",
+			"name": "Mads Vigand",
+			"summary": "Møbelsnedker (Selvstændig)",
+			"location": "Odense"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/marta-anna-misztal-b8784852",
+			"name": "Marta Anna Misztal",
+			"summary": "Konsulent hos Martidita",
+			"location": "København"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/erik-wichmann-1bab0b121",
+			"name": "Erik Wichmann",
+			"summary": "Bankrådgiver på jagt efter nye udfordringer.",
+			"location": "Kolding"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/magnus-n-andersen-39a178a1",
+			"name": "Magnus N. Andersen",
+			"summary": "Senior Seles Represent hos GLS",
+			"location": "København"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/kim-jacobsen-2894181aa",
+			"name": "Kim Jacobsen",
+			"summary": "Produktionschef hos Uniplan Danmark A/S",
+			"location": "Vejen"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/peter-s%C3%B8rensen-78481964",
+			"name": "Peter Sørensen",
+			"summary": "Systemudvikler hos Unik System Design",
+			"location": "Vejle"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/huremovic",
+			"name": "Armin Huremović",
+			"summary": "Dataspecialist hos Unik System Design",
+			"location": "Syddanmark, Danmark"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/jacobholesen",
+			"name": "Jacob Olesen",
+			"summary": "Data science | machine learning | data modellering | Python | SQL | Power BI",
+			"location": "København"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/tobias-dahl-522838147",
+			"name": "Tobias Dahl",
+			"summary": "Data Specialist at Unik System Design",
+			"location": "Syddanmark, Danmark"
+		},
+		{
+			"link": "https://dk.linkedin.com/in/allanberthelsen",
+			"name": "Allan Berthelsen",
+			"summary": "Bachelor i webudvikling & Datamatiker",
+			"location": "Sjælland, Danmark"
+		}
+	],
+	"recommendations": [
+		"Ihærdig, nysgerrig og ydmyg. Det er de tre ord jeg tænker på, når jeg tænker på Christoffer. Han har evnen til at sætte sig i andres perspektiver når det kommer til problemstillinger. Desuden går Christoffer altid 'above and beyond' i alle vores projekter, hvilket er noget jeg ikke tit oplever med andre."
+	],
+	"activities": [
+		{
+			"title": "Visual Studio 2022 is here! From 64-bit to new personalization options, join Leslie Richardson and Mads Kristensen as they explore all the helpful…",
+			"link": "https://www.linkedin.com/signup/cold-join",
+			"activity_status": "Christoffer Pedersen synes godt om dette"
+		},
+		{
+			"title": "Stort TILLYKKE til John, som netop er certificeret DevOps Engineer Expert. John har været en del af udviklingsteamet, Team Core, siden januar og…",
+			"link": "https://www.linkedin.com/signup/cold-join",
+			"activity_status": "Christoffer Pedersen synes godt om dette"
+		},
+		{
+			"title": "#uniksystemdesign Det er da et medarbejdergode der kan noget, 750 is i fryseren i Caféen  <3 så mangler vi bare sommeren :)",
+			"link": "https://www.linkedin.com/signup/cold-join",
+			"activity_status": "Christoffer Pedersen synes godt om dette"
+		}
+	],
+	"similarly_named_profiles": [
+		{
+			"name": "Christoffer Pedersen",
+			"link": "https://dk.linkedin.com/in/christoffer-pedersen",
+			"summary": "Statsautoriseret revisor ✦Værdiskabende rådgiver ✦Regnskab ✦Revision ✦Selskabsskat ✦Skat ✦Robotics",
+			"location": "Syddanmark, Danmark"
+		},
+		{
+			"name": "Christoffer Pedersen",
+			"link": "https://dk.linkedin.com/in/christoffer-pedersen-676a7026",
+			"summary": "Lektor hos Aarhus Handelsgymnasium og Byrådsmedlem hos Syddjurs Kommune",
+			"location": "Midtjylland, Danmark"
+		},
+		{
+			"name": "Christoffer Pedersen",
+			"link": "https://dk.linkedin.com/in/christoffer-kratmann-pedersen",
+			"summary": "Independent consultant - sales and engineering",
+			"location": "Holstebro"
+		},
+		{
+			"name": "Christoffer Pedersen",
+			"link": "https://dk.linkedin.com/in/christoffer-pedersen-203007b9",
+			"summary": "Employee at Downunderwines A/S, with a focus on sales, IT optimization and a notch of everything | Founder of Louise Scheel ApS |",
+			"location": "Aabenraa"
+		},
+		{
+			"name": "Christoffer Pedersen",
+			"link": "https://se.linkedin.com/in/christoffer-pedersen-65642720a",
+			"summary": "Dryckeschef på ica maxi bromölla",
+			"location": "Bromölla"
+		}
+	],
+	"articles": []
+}

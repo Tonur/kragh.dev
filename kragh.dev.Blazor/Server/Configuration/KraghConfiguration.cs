@@ -1,6 +1,4 @@
-﻿#nullable disable
-
-namespace kragh.dev.Blazor.Models
+﻿namespace kragh.dev.Blazor.Server.Configuration
 {
 	public class KraghConfiguration
 	{

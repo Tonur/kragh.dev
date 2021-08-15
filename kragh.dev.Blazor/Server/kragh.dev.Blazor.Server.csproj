@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+		<Nullable>enable</Nullable>
+	  <UserSecretsId>1ebe4106-bae0-4b90-b2d1-b8aaaae71bef</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="5.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Client\kragh.dev.Blazor.Client.csproj" />
+    <ProjectReference Include="..\Shared\kragh.dev.Blazor.Shared.csproj" />
+  </ItemGroup>
+
+
+</Project>

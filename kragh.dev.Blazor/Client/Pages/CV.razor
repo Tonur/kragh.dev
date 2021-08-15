@@ -1,18 +1,21 @@
 ﻿@page "/cv"
-@using Newtonsoft.Json
-@inject KraghConfiguration _config
-<h1>CV</h1>
-
-<p>A list of my accomplishments.</p>
-
-<br />
+@inject ClientConfiguration _config
 
 @if (LinkedInResponse is null)
 {
 	<em>Loading...</em>
+	<p>@_config.BaseAddress</p>
 }
 else
 {
+	<img src="@LinkedInResponse.ProfilePicUrl" alt="@LinkedInResponse.FullName"/>
+
+	<h1>CV</h1>
+
+	<p>A list of my accomplishments.</p>
+
+	<br />
+
 	<div class="row justify-content-between">
 		<div class="col-6">
 			<h2>Jobs</h2>
@@ -42,24 +45,15 @@ else
 	</div>
 }
 
-@code {
-	public LinkedInResponse? LinkedInResponse { get; set; }
 
-	private const string ProxyCurlUrl = @"https://nubela.co/proxycurl/api/v2/linkedin";
-	private const string LinkedInUrl = @"https://www.linkedin.com/in/";
+@code {
+	public LinkedInResponse LinkedInResponse { get; set; }
 
 	protected override async Task OnInitializedAsync()
 	{
-		var response = await ProxyCurlUrl
-			.WithOAuthBearerToken(_config.ProxyCurlToken)
-			.SetQueryParams(new
-			{
-				url = HttpUtility.UrlEncode(LinkedInUrl.AppendPathSegment(_config.LinkedInId).ToString()),
-				use_cache = "if-present",
-			})
-			.GetStringAsync();
-
-		LinkedInResponse = JsonConvert.DeserializeObject<LinkedInResponse>(response);
+		LinkedInResponse = await _config.BaseAddress
+			.AppendPathSegment("LinkedIn")
+			.GetJsonAsync<LinkedInResponse>();
 
 	}
 }

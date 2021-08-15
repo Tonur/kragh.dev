@@ -1,7 +1,6 @@
-﻿using System;
-#nullable disable
+using System;
 
-namespace kragh.dev.Blazor.Models
+namespace kragh.dev.Blazor.Client.Models
 {
 	public class ItemEntity
 	{
