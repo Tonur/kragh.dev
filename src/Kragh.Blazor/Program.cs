@@ -23,7 +23,7 @@ namespace Kragh.Blazor
 				var navigationManager = sp.GetRequiredService<NavigationManager>();
 				return new ClientConfiguration
 				{
-					BaseAddress = new Uri(navigationManager.BaseUri.TrimEnd('/') + ":5001")
+					BaseAddress = new Uri(@"https://localhost:8081")//navigationManager.BaseUri)
 				};
 			});
 

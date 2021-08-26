@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "Kragh.dev": {
+    "Kragh.Blazor": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
