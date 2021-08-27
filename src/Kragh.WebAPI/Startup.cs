@@ -28,6 +28,8 @@ namespace Kragh.WebAPI
 				});
 			});
 
+			services.AddSwaggerGen();
+
 			services.AddControllersWithViews();
 			services.AddRazorPages();
 
@@ -56,6 +58,8 @@ namespace Kragh.WebAPI
 			app.UseSwaggerUI();
 
 			app.UseCors();
+
+			app.UseSwaggerUI();
 
 			app.UseHttpsRedirection();
 

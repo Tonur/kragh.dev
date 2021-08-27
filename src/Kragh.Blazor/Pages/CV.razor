@@ -11,7 +11,7 @@
 }
 else
 {
-	<img src="@LinkedInResponse.ProfilePicUrl" alt="@LinkedInResponse.FullName"/>
+	<img src="@LinkedInResponse.ProfilePicUrl" alt="@LinkedInResponse.FullName" />
 
 	<h1>CV</h1>
 
@@ -25,9 +25,9 @@ else
 			@foreach (var experiencesByCompany in LinkedInResponse.Experiences
 					.GroupBy(experience => new { experience.Company, experience.LogoUrl, experience.CompanyLinkedInProfileUrl }))
 			{
-				<ItemCard ItemTitle="@experiencesByCompany.Key.Company"
-				  LogoUrl="@experiencesByCompany.Key.LogoUrl"
-				  LinkedInProfileUrl="@experiencesByCompany.Key.CompanyLinkedInProfileUrl"
+				<CardItem ItemTitle="@experiencesByCompany.Key.Company"
+				  LogoUrl="@experiencesByCompany.Key.LogoUrl.ToString()"
+				  LinkedInProfileUrl="@experiencesByCompany.Key.CompanyLinkedInProfileUrl.ToString()"
 				  ItemEntities="@experiencesByCompany.Select(item => new ItemEntity { Title = item.Title, Description = item.Description, Location = item.Location, StartsAt = item.StartsAt, EndsAt = item.EndsAt})" />
 				<br />
 			}
@@ -38,8 +38,8 @@ else
 			@foreach (var experiencesByCompany in LinkedInResponse.Education
 					.GroupBy(experience => new { experience.School, experience.LogoUrl }))
 			{
-				<ItemCard ItemTitle="@experiencesByCompany.Key.School"
-				  LogoUrl="@experiencesByCompany.Key.LogoUrl"
+				<CardItem ItemTitle="@experiencesByCompany.Key.School"
+				  LogoUrl="@experiencesByCompany.Key.LogoUrl.ToString()"
 				  ItemEntities="@experiencesByCompany.Select(item => new ItemEntity { Title = item.DegreeName, Description = item.FieldOfStudy, StartsAt = item.StartsAt, EndsAt = item.EndsAt})" />
 
 				<br />
@@ -50,7 +50,7 @@ else
 
 
 @code {
-	public LinkedInResponse LinkedInResponse { get; set; }
+	public LinkedInResponse? LinkedInResponse { get; set; }
 
 	protected override async Task OnInitializedAsync()
 	{

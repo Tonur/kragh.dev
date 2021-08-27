@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kragh.Blazor", "src\Kragh.Blazor\Kragh.Blazor.csproj", "{E6968207-43A7-4C01-9286-DA37FEC3B92E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kragh.WebAPI", "src\Kragh.WebAPI\Kragh.WebAPI.csproj", "{A278D089-D184-4B80-9452-9ED427E5ADF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kragh.WebAPI", "src\Kragh.WebAPI\Kragh.WebAPI.csproj", "{A278D089-D184-4B80-9452-9ED427E5ADF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kragh.Shared", "src\Kragh.Shared\Kragh.Shared.csproj", "{0C1BFBF9-6A48-4429-A61F-0E6390A65D25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kragh.Shared", "src\Kragh.Shared\Kragh.Shared.csproj", "{0C1BFBF9-6A48-4429-A61F-0E6390A65D25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
