@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Kragh.WebAPI.Configuration;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
 namespace Kragh.WebAPI
@@ -12,9 +14,9 @@ namespace Kragh.WebAPI
 
 		public static IHostBuilder CreateHostBuilder(string[] args) =>
 				Host.CreateDefaultBuilder(args)
-						.ConfigureWebHostDefaults(webBuilder =>
-						{
-							webBuilder.UseStartup<Startup>();
-						});
+					.ConfigureWebHostDefaults(webBuilder =>
+					{
+						webBuilder.UseStartup<Startup>();
+					});
 	}
 }

@@ -32,13 +32,7 @@ namespace Kragh.WebAPI
 
 			services.AddControllersWithViews();
 			services.AddRazorPages();
-
-			services.AddSingleton(_ =>
-			{
-				KraghConfiguration config = new();
-				Configuration.Bind("KraghConfiguration", config);
-				return config;
-			});
+			services.AddSingleton(Configuration.GetSection("KraghConfiguration").Get<KraghConfiguration>());
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,7 +49,15 @@ namespace Kragh.WebAPI
 				app.UseHsts();
 			}
 
-			app.UseSwaggerUI();
+			// Enable middleware to serve generated Swagger as a JSON endpoint.
+			app.UseSwagger();
+
+			// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+			// specifying the Swagger JSON endpoint.
+			app.UseSwaggerUI(c =>
+			{
+				c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+			});
 
 			app.UseCors();
 
