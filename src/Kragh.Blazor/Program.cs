@@ -24,6 +24,7 @@ namespace Kragh.Blazor
 				return new ClientConfiguration
 				{
 					BaseAddress = new Uri(@"https://localhost:8081")//navigationManager.BaseUri)
+					//BaseAddress = new Uri(@"https://kragh.dev:8081")//navigationManager.BaseUri)
 				};
 			});
 
